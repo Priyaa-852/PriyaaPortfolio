@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyaa Dharshini TN | Electronics & Computer Engineering Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional portfolio of Priyaa Dharshini TN - Electronics & Computer Engineering student specializing in VLSI, Embedded Systems, and Programming. Explore projects, certifications, and academic timeline.">
+    <meta name="keywords" content="Priyaa Dharshini TN, VLSI, Embedded Systems, Programming, Electronics and Computer Engineering, Sona College of Technology, Portfolio, Cadence, Arduino, Python, C, Verilog">
+    <meta name="author" content="Priyaa Dharshini TN">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Priyaa Dharshini TN | Electronics & Computer Engineering Portfolio">
+    <meta property="og:description" content="Discover projects in VLSI, Embedded Systems, and Programming. Electronics & Computer Engineering student driven by innovation.">
+    <meta property="og:image" content="assets/priyaa_photo.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Priyaa Dharshini TN | Electronics & Computer Engineering Portfolio">
+    <meta property="twitter:description" content="Discover projects in VLSI, Embedded Systems, and Programming. Electronics & Computer Engineering student driven by innovation.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='25' y='25' width='50' height='50' rx='8' fill='%230a0a0f' stroke='%2300f5ff' stroke-width='6'/><circle cx='50' cy='50' r='12' fill='%237c3aed'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Icons (FontAwesome & Lucide-like custom SVGs inlined) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor-dot"></div>
+    <div id="custom-cursor-circle">
+        <div class="circle-inner-crosshair"></div>
+        <div class="circle-radar-line"></div>
+    </div>
+    <div class="cursor-trail-container"></div>
+
+    <!-- Living Circuit Canvas Background -->
+    <canvas id="circuit-bg"></canvas>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress-bar"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-chip-container">
+            <svg class="loader-chip" viewBox="0 0 100 100">
+                <rect x="25" y="25" width="50" height="50" rx="8" class="chip-base" />
+                <rect x="33" y="33" width="34" height="34" rx="4" class="chip-core" />
+                <!-- Pins -->
+                <line x1="10" y1="35" x2="25" y2="35" class="loader-pin" />
+                <line x1="10" y1="50" x2="25" y2="50" class="loader-pin" />
+                <line x1="10" y1="65" x2="25" y2="65" class="loader-pin" />
+                <line x1="75" y1="35" x2="90" y2="35" class="loader-pin" />
+                <line x1="75" y1="50" x2="90" y2="50" class="loader-pin" />
+                <line x1="75" y1="65" x2="90" y2="65" class="loader-pin" />
+                <line x1="35" y1="10" x2="35" y2="25" class="loader-pin" />
+                <line x1="50" y1="10" x2="50" y2="25" class="loader-pin" />
+                <line x1="65" y1="10" x2="65" y2="25" class="loader-pin" />
+                <line x1="35" y1="75" x2="35" y2="90" class="loader-pin" />
+                <line x1="50" y1="75" x2="50" y2="90" class="loader-pin" />
+                <line x1="65" y1="75" x2="65" y2="90" class="loader-pin" />
+            </svg>
+            <div class="loader-text">INITIALIZING CIRCUIT BOARD...</div>
+            <div class="loader-progress"><span class="loader-percentage">0%</span></div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <svg class="microchip-icon" viewBox="0 0 100 100">
+                    <rect x="25" y="25" width="50" height="50" rx="8" class="chip-body" />
+                    <rect x="35" y="35" width="30" height="30" rx="4" class="chip-silicon" />
+                    <!-- Left pins -->
+                    <path d="M10,38 L25,38 M10,50 L25,50 M10,62 L25,62" class="chip-trace" />
+                    <!-- Right pins -->
+                    <path d="M75,38 L90,38 M75,50 L90,50 M75,62 L90,62" class="chip-trace" />
+                    <!-- Top pins -->
+                    <path d="M38,10 L38,25 M50,10 L50,25 M62,10 L62,25" class="chip-trace" />
+                    <!-- Bottom pins -->
+                    <path d="M38,75 L38,90 M50,75 L50,90 M62,75 L62,90" class="chip-trace" />
+                </svg>
+                <span class="logo-text">PRIYAA <span class="accent-text">DHARSHINI</span></span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#timeline" class="nav-link">Academic</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+                <svg viewBox="0 0 100 100" width="32" height="32" class="menu-chip-svg">
+                    <rect x="25" y="25" width="50" height="50" rx="6" fill="none" stroke="currentColor" stroke-width="4" />
+                    <circle cx="50" cy="50" r="10" fill="currentColor" class="chip-center" />
+                    <line x1="50" y1="10" x2="50" y2="25" stroke="currentColor" stroke-width="4" />
+                    <line x1="50" y1="75" x2="50" y2="90" stroke="currentColor" stroke-width="4" />
+                    <line x1="10" y1="50" x2="25" y2="50" stroke="currentColor" stroke-width="4" />
+                    <line x1="75" y1="50" x2="90" y2="50" stroke="currentColor" stroke-width="4" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="drawer-logo">
+                <svg class="microchip-icon pulsing" viewBox="0 0 100 100" width="30">
+                    <rect x="25" y="25" width="50" height="50" rx="8" class="chip-body" />
+                    <circle cx="50" cy="50" r="12" fill="#7c3aed" />
+                </svg>
+                <span>MENU CONTROLLER</span>
+            </div>
+            <button class="drawer-close" id="drawer-close-btn">&times;</button>
+        </div>
+        <div class="drawer-menu">
+            <a href="#home" class="drawer-link">Home</a>
+            <a href="#about" class="drawer-link">About</a>
+            <a href="#skills" class="drawer-link">Skills</a>
+            <a href="#projects" class="drawer-link">Projects</a>
+            <a href="#certifications" class="drawer-link">Certifications</a>
+            <a href="#gallery" class="drawer-link">Gallery</a>
+            <a href="#timeline" class="drawer-link">Academic Timeline</a>
+            <a href="#contact" class="drawer-link">Contact</a>
+        </div>
+        <div class="drawer-footer">
+            <div class="drawer-circuit-node"></div>
+            <span>PRIYAA DHARSHINI TN</span>
+        </div>
+    </div>
+
+    <!-- Quick Floating Action Toolbar -->
+    <div class="floating-socials">
+        <a href="https://linkedin.com/in/priyaa-dharshini-tn-88095b31b" target="_blank" aria-label="LinkedIn Profile" class="floating-link">
+            <i class="fab fa-linkedin-in"></i>
+            <span class="tooltip">LinkedIn</span>
+        </a>
+        <a href="https://github.com/PriyaadharshiniTN" target="_blank" aria-label="GitHub Profile" class="floating-link">
+            <i class="fab fa-github"></i>
+            <span class="tooltip">GitHub</span>
+        </a>
+        <a href="mailto:tnpriyaa2007@gmail.com" aria-label="Email" class="floating-link">
+            <i class="fas fa-envelope"></i>
+            <span class="tooltip">Email</span>
+        </a>
+        <a href="tel:9385971701" aria-label="Phone Number" class="floating-link">
+            <i class="fas fa-phone"></i>
+            <span class="tooltip">Phone</span>
+        </a>
+    </div>
+
+    <!-- MAIN SECTIONS -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="grid-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-info" data-reveal="fade-right">
+                    <div class="circuit-status">
+                        <span class="status-dot pulsing"></span>
+                        <span class="status-text mono">SYSTEM ONLINE // CORE LOADED</span>
+                    </div>
+                    
+                    <h1 class="hero-name" id="hero-name-target">
+                        <!-- Letters dynamically generated in JS for reveal animation -->
+                        <span class="reveal-wrapper">PRIYAA DHARSHINI TN</span>
+                    </h1>
+                    
+                    <div class="type-container">
+                        <span class="type-prefix mono">&gt; </span>
+                        <span class="typing-text" id="typing-element"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+
+                    <p class="hero-story">
+                        "A girl who travelled nearly 168 kilometers away from home with a dream to learn, explore, and grow in the world of technology. Priyaa Dharshini TN is an aspiring Electronics and Computer Engineering student driven by curiosity, determination, and a passion for innovation. With strong interests in programming, VLSI, and emerging technologies, she continuously pushes herself to learn beyond classrooms and transform ideas into impactful solutions. Her journey reflects resilience, dedication, and the courage to step out of comfort zones in pursuit of knowledge and excellence."
+                    </p>
+
+                    <div class="hero-cta-buttons">
+                        <a href="#projects" class="btn btn-primary glowing-btn">
+                            <span class="btn-text">View Projects</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="assets/resume_image.jpg" download="Priyaa_Dharshini_TN_Resume.jpg" target="_blank" class="btn btn-secondary border-glow-btn">
+                            <i class="fas fa-download icon-left"></i>
+                            <span class="btn-text">Download Resume</span>
+                        </a>
+                        <a href="#contact" class="btn btn-tertiary">
+                            <span class="btn-text">Contact Me</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-contact-quick mono">
+                        <span><i class="fas fa-phone accent-cyan"></i> 9385971701</span>
+                        <span><i class="fas fa-envelope accent-violet"></i> tnpriyaa2007@gmail.com</span>
+                        <span><i class="fas fa-map-marker-alt accent-gold"></i> Salem</span>
+                    </div>
+                </div>
+
+                <div class="hero-photo-wrapper" data-reveal="fade-left">
+                    <div class="hex-frame-container">
+                        <!-- Custom Animated SVG Circuit Hexagonal Frame -->
+                        <svg class="hex-border-svg" viewBox="0 0 400 460">
+                            <!-- Outer hexagonal glow -->
+                            <polygon points="200,10 390,120 390,340 200,450 10,340 10,120" class="hex-outer-path" />
+                            <!-- Inner hexagonal frame -->
+                            <polygon points="200,20 380,125 380,335 200,440 20,335 20,125" class="hex-inner-path" />
+                            <!-- Circuit connection pathways -->
+                            <path d="M10,120 L50,95 L100,95" class="hex-circuit-path" />
+                            <path d="M390,340 L350,365 L300,365" class="hex-circuit-path" />
+                            <circle cx="100" cy="95" r="5" class="hex-node-dot" />
+                            <circle cx="300" cy="365" r="5" class="hex-node-dot" />
+                        </svg>
+                        
+                        <div class="hex-image-holder">
+                            <img src="assets/priyaa_photo.jpg" alt="Priyaa Dharshini TN Portrait" class="hex-img">
+                            <div class="hex-scan-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down-indicator" aria-label="Scroll Down">
+                <span class="mouse-wheel"></span>
+                <span class="mouse-text mono">SCROLL FOR DETAILS</span>
+            </a>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="divider-container">
+            <svg class="circuit-divider" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,50 L200,50 L230,20 L500,20 L530,70 L800,70 L830,40 L1100,40 L1130,80 L1440,80" class="divider-base-line" />
+                <path d="M0,50 L200,50 L230,20 L500,20" class="divider-glow-line cyan-glow" />
+                <path d="M530,70 L800,70 L830,40 L1100,40" class="divider-glow-line violet-glow" />
+                <!-- Nodes -->
+                <circle cx="200" cy="50" r="4" class="divider-node" />
+                <circle cx="500" cy="20" r="4" class="divider-node" />
+                <circle cx="800" cy="70" r="4" class="divider-node" />
+                <circle cx="1100" cy="40" r="4" class="divider-node" />
+            </svg>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-tag mono">[ MODULE 01 // PROFILE ]</span>
+                    <h2 class="section-title">ABOUT ME</h2>
+                    <div class="circuit-header-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-panel" data-reveal="fade-right">
+                        <div class="glass-inner-border"></div>
+                        <i class="fas fa-graduation-cap card-corner-icon"></i>
+                        <h3 class="card-title accent-cyan font-header">Mission Statement</h3>
+                        <p class="card-body">
+                            My journey in Electronics and Computer Engineering is guided by a curiosity for how microprocessors sense, compute, and actuate the world around us. With an academic anchor in ECE at Sona College of Technology, I aim to merge high-performance computing, hardware architectures (VLSI), and responsive software to create seamless, automated systems.
+                        </p>
+                        <blockquote class="custom-blockquote mono">
+                            "Connecting physical circuits with digital computation to power the smart networks of tomorrow."
+                        </blockquote>
+                    </div>
+
+                    <div class="about-card glass-panel" data-reveal="fade-left">
+                        <div class="glass-inner-border"></div>
+                        <i class="fas fa-microchip card-corner-icon"></i>
+                        <h3 class="card-title accent-violet font-header">Core Pillars</h3>
+                        <div class="about-pillars">
+                            <div class="pillar-item">
+                                <div class="pillar-header">
+                                    <span class="pillar-dot bg-cyan"></span>
+                                    <span class="pillar-name font-mono">VLSI DESIGN</span>
+                                </div>
+                                <p class="pillar-text">Simulating architectures using hardware description languages (Verilog) and Cadence tools.</p>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-header">
+                                    <span class="pillar-dot bg-violet"></span>
+                                    <span class="pillar-name font-mono">EMBEDDED SYSTEMS</span>
+                                </div>
+                                <p class="pillar-text">Integrating microcontrollers (Arduino, Raspberry Pi) with complex sensors and firmware.</p>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-header">
+                                    <span class="pillar-dot bg-gold"></span>
+                                    <span class="pillar-name font-mono">ENERGETIC ENTHUSIAST</span>
+                                </div>
+                                <p class="pillar-text">Always eager to participate in hackathons, workshops, and learn emerging programming paradigms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STATS COUNTER SECTION -->
+                <div class="stats-grid" id="stats-counter-grid">
+                    <div class="stat-card glass-panel node-card" data-reveal="zoom-in">
+                        <div class="node-wiring"></div>
+                        <div class="stat-num font-header" data-target="8.39" data-decimals="2">0.00</div>
+                        <div class="stat-label font-mono">B.E. CGPA</div>
+                    </div>
+                    <div class="stat-card glass-panel node-card" data-reveal="zoom-in" data-delay="100">
+                        <div class="node-wiring"></div>
+                        <div class="stat-num font-header" data-target="87" data-decimals="0">0</div>
+                        <div class="stat-suffix">%</div>
+                        <div class="stat-label font-mono">HSC Grade</div>
+                    </div>
+                    <div class="stat-card glass-panel node-card" data-reveal="zoom-in" data-delay="200">
+                        <div class="node-wiring"></div>
+                        <div class="stat-num font-header" data-target="80.8" data-decimals="1">0.0</div>
+                        <div class="stat-suffix">%</div>
+                        <div class="stat-label font-mono">SSLC Grade</div>
+                    </div>
+                    <div class="stat-card glass-panel node-card" data-reveal="zoom-in" data-delay="300">
+                        <div class="node-wiring"></div>
+                        <div class="stat-num font-header" data-target="8" data-decimals="0">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label font-mono">Certifications</div>
+                    </div>
+                    <div class="stat-card glass-panel node-card" data-reveal="zoom-in" data-delay="400">
+                        <div class="node-wiring"></div>
+                        <div class="stat-num font-header" data-target="4" data-decimals="0">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label font-mono">Hackathons</div>
+                    </div>
+                    <div class="stat-card glass-panel node-card" data-reveal="zoom-in" data-delay="500">
+                        <div class="node-wiring"></div>
+                        <div class="stat-num font-header" data-target="6" data-decimals="0">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label font-mono">Projects Completed</div>
+                    </div>
+                    <div class="stat-card glass-panel node-card" data-reveal="zoom-in" data-delay="600">
+                        <div class="node-wiring"></div>
+                        <div class="stat-num font-header" data-target="15" data-decimals="0">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label font-mono">Technical Skills</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="divider-container">
+            <svg class="circuit-divider" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,20 L300,20 L330,60 L600,60 L630,30 L900,30 L930,80 L1200,80 L1230,40 L1440,40" class="divider-base-line" />
+                <path d="M330,60 L600,60 L630,30 L900,30" class="divider-glow-line cyan-glow" />
+                <path d="M930,80 L1200,80 L1230,40 L1440,40" class="divider-glow-line gold-glow" />
+                <circle cx="330" cy="60" r="4" class="divider-node" />
+                <circle cx="630" cy="30" r="4" class="divider-node" />
+                <circle cx="930" cy="80" r="4" class="divider-node" />
+                <circle cx="1230" cy="40" r="4" class="divider-node" />
+            </svg>
+        </div>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-tag mono">[ MODULE 02 // COMPILER ]</span>
+                    <h2 class="section-title">TECHNICAL SKILLS</h2>
+                    <div class="circuit-header-line"></div>
+                </div>
+
+                <div class="skills-layout-container">
+                    <div class="skills-categories-tabs" data-reveal="fade-right">
+                        <button class="skill-tab-btn active" data-category="all">
+                            <i class="fas fa-border-all"></i> All Sectors
+                        </button>
+                        <button class="skill-tab-btn" data-category="programming">
+                            <i class="fas fa-code"></i> Programming
+                        </button>
+                        <button class="skill-tab-btn" data-category="embedded">
+                            <i class="fas fa-network-wired"></i> Tools &amp; Hardware
+                        </button>
+                        <button class="skill-tab-btn" data-category="databases">
+                            <i class="fas fa-database"></i> Databases
+                        </button>
+                        <button class="skill-tab-btn" data-category="softskills">
+                            <i class="fas fa-users"></i> Soft Skills
+                        </button>
+                        <button class="skill-tab-btn" data-category="languages">
+                            <i class="fas fa-language"></i> Languages
+                        </button>
+                    </div>
+
+                    <!-- Glowing Honeycomb Hexagonal skills grid -->
+                    <div class="honeycomb-wrapper" data-reveal="fade-left">
+                        <div class="honeycomb" id="honeycomb-skills-grid">
+                            <!-- Dynamic Honeycomb Badges injected in JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="divider-container">
+            <svg class="circuit-divider" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,80 L200,80 L230,40 L450,40 L480,70 L700,70 L730,20 L1000,20 L1030,60 L1440,60" class="divider-base-line" />
+                <path d="M230,40 L450,40 L480,70 L700,70" class="divider-glow-line violet-glow" />
+                <circle cx="230" cy="40" r="4" class="divider-node" />
+                <circle cx="480" cy="70" r="4" class="divider-node" />
+                <circle cx="730" cy="20" r="4" class="divider-node" />
+                <circle cx="1030" cy="60" r="4" class="divider-node" />
+            </svg>
+        </div>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-tag mono">[ MODULE 03 // INTEGRATED PROJECTS ]</span>
+                    <h2 class="section-title">ENGINEERED PROJECTS</h2>
+                    <div class="circuit-header-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card-wrapper" data-reveal="fade-up">
+                        <div class="project-tilt-card glass-panel">
+                            <div class="project-circuit-overlay"></div>
+                            <div class="project-header">
+                                <span class="project-status completed font-mono"><i class="fas fa-check-circle"></i> COMPLETED</span>
+                                <span class="project-id font-mono">PRJ-01</span>
+                            </div>
+                            <h3 class="project-title font-header">AI-Enabled Career Guidance &amp; Mental Health Assistant</h3>
+                            <p class="project-description">
+                                An intelligent AI-powered platform providing customized academic pathfinding and mental wellness support. Utilizes Natural Language Processing to assess student queries, detect pressure indicators, and generate reassuring, context-aware counseling scripts.
+                            </p>
+                            <div class="project-tech-stack font-mono">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>NLP</span>
+                                <span>Flask/Streamlit</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/PriyaadharshiniTN" target="_blank" class="project-link font-mono"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" class="project-link font-mono demo-trigger"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card-wrapper" data-reveal="fade-up" data-delay="100">
+                        <div class="project-tilt-card glass-panel">
+                            <div class="project-circuit-overlay"></div>
+                            <div class="project-header">
+                                <span class="project-status completed font-mono"><i class="fas fa-check-circle"></i> COMPLETED</span>
+                                <span class="project-id font-mono">PRJ-02</span>
+                            </div>
+                            <h3 class="project-title font-header">Universal Pop-up Header Assistant</h3>
+                            <p class="project-description">
+                                A smart browser-level and application overlay component that acts as a context-aware guided wizard, injecting user interfaces dynamically across webpages to assist in UI onboarding and reduce product friction.
+                            </p>
+                            <div class="project-tech-stack font-mono">
+                                <span>JavaScript</span>
+                                <span>HTML5/CSS3</span>
+                                <span>Browser API</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/PriyaadharshiniTN" target="_blank" class="project-link font-mono"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" class="project-link font-mono demo-trigger"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card-wrapper" data-reveal="fade-up" data-delay="200">
+                        <div class="project-tilt-card glass-panel">
+                            <div class="project-circuit-overlay"></div>
+                            <div class="project-header">
+                                <span class="project-status in-progress font-mono"><i class="fas fa-microscope"></i> IN PROGRESS</span>
+                                <span class="project-id font-mono">PRJ-03</span>
+                            </div>
+                            <h3 class="project-title font-header">Angiolite: Non-Invasive Angiogram Replacement</h3>
+                            <p class="project-description">
+                                Innovative biomedical engineering design aimed at replacing traditional invasive angiogram surgeries. Incorporates non-invasive optoelectronic sensors and signal-processing filters via embedded systems to reconstruct cardiovascular flows.
+                            </p>
+                            <div class="project-tech-stack font-mono">
+                                <span>Embedded C</span>
+                                <span>Biomedical Sensors</span>
+                                <span>Signal Processing</span>
+                                <span>Arduino</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/PriyaadharshiniTN" target="_blank" class="project-link font-mono"><i class="fab fa-github"></i> Source Code</a>
+                                <span class="project-link-disabled font-mono"><i class="fas fa-lock"></i> Research Phase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card-wrapper" data-reveal="fade-up" data-delay="300">
+                        <div class="project-tilt-card glass-panel">
+                            <div class="project-circuit-overlay"></div>
+                            <div class="project-header">
+                                <span class="project-status in-progress font-mono"><i class="fas fa-microscope"></i> IN PROGRESS</span>
+                                <span class="project-id font-mono">PRJ-04</span>
+                            </div>
+                            <h3 class="project-title font-header">Detect &amp; Analyzer - Smart People Counter</h3>
+                            <p class="project-description">
+                                IoT people detection assembly analyzing physical traffic patterns via real-time camera nodes. Connects with an Arduino device interface to manage two-way notification signals and logs visual activity patterns on a localized sever.
+                            </p>
+                            <div class="project-tech-stack font-mono">
+                                <span>Python</span>
+                                <span>OpenCV</span>
+                                <span>IoT Modules</span>
+                                <span>Raspberry Pi / Arduino</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/PriyaadharshiniTN" target="_blank" class="project-link font-mono"><i class="fab fa-github"></i> Source Code</a>
+                                <span class="project-link-disabled font-mono"><i class="fas fa-lock"></i> System Build</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card-wrapper" data-reveal="fade-up" data-delay="400">
+                        <div class="project-tilt-card glass-panel">
+                            <div class="project-circuit-overlay"></div>
+                            <div class="project-header">
+                                <span class="project-status completed font-mono"><i class="fas fa-check-circle"></i> COMPLETED</span>
+                                <span class="project-id font-mono">PRJ-05</span>
+                            </div>
+                            <h3 class="project-title font-header">Smart Attendance Monitoring System</h3>
+                            <p class="project-description">
+                                Embedded attendance automation framework using biometric/RFID sensor integrations. Relies on microcontrollers to log arrivals instantly and Python scripts to interface with local registers for seamless database tracking.
+                            </p>
+                            <div class="project-tech-stack font-mono">
+                                <span>Python</span>
+                                <span>Arduino</span>
+                                <span>Sensors Integration</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/PriyaadharshiniTN" target="_blank" class="project-link font-mono"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" class="project-link font-mono demo-trigger"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card-wrapper" data-reveal="fade-up" data-delay="500">
+                        <div class="project-tilt-card glass-panel">
+                            <div class="project-circuit-overlay"></div>
+                            <div class="project-header">
+                                <span class="project-status completed font-mono"><i class="fas fa-check-circle"></i> SIMULATED</span>
+                                <span class="project-id font-mono">PRJ-06</span>
+                            </div>
+                            <h3 class="project-title font-header">VLSI-Based Traffic Signal Controller</h3>
+                            <p class="project-description">
+                                Designed and simulated an optimized traffic signal timing state-machine using VLSI design principles. Written in Verilog HDL and verified via Cadence design simulation suites to optimize heavy junction routing.
+                            </p>
+                            <div class="project-tech-stack font-mono">
+                                <span>Verilog HDL</span>
+                                <span>Cadence Simulation Tools</span>
+                                <span>FPGA Principles</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/PriyaadharshiniTN" target="_blank" class="project-link font-mono"><i class="fab fa-github"></i> Source Code</a>
+                                <span class="project-link-disabled font-mono"><i class="fas fa-lock"></i> Cadence File</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="divider-container">
+            <svg class="circuit-divider" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,40 L400,40 L430,70 L700,70 L730,20 L1000,20 L1030,80 L1440,80" class="divider-base-line" />
+                <path d="M430,70 L700,70 L730,20 L1000,20" class="divider-glow-line cyan-glow" />
+                <circle cx="430" cy="70" r="4" class="divider-node" />
+                <circle cx="730" cy="20" r="4" class="divider-node" />
+                <circle cx="1030" cy="80" r="4" class="divider-node" />
+            </svg>
+        </div>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-tag mono">[ MODULE 04 // VALIDATION ]</span>
+                    <h2 class="section-title">CERTIFICATIONS</h2>
+                    <div class="circuit-header-line"></div>
+                </div>
+
+                <div class="certifications-grid">
+                    <!-- Certificate 1 -->
+                    <div class="cert-flip-card" data-reveal="zoom-in">
+                        <div class="cert-card-inner glass-panel">
+                            <div class="cert-front">
+                                <div class="cert-glow-ring"></div>
+                                <div class="cert-img-wrapper">
+                                    <img src="assets/cert_startup_sparks.jpg" alt="Startup Sparks Certificate">
+                                </div>
+                                <div class="cert-title-container">
+                                    <span class="cert-issuer font-mono accent-cyan">SONA INCUBATION FOUNDATION</span>
+                                    <h4 class="cert-name font-header">Startup Sparks: Learning from the Founders</h4>
+                                </div>
+                            </div>
+                            <div class="cert-back">
+                                <div class="cert-badge-seal">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4 class="cert-back-name font-header">Startup Sparks</h4>
+                                <ul class="cert-details-list font-mono">
+                                    <li><strong>ISSUER:</strong> Sona College of Technology &amp; DST NIDHI</li>
+                                    <li><strong>DATE:</strong> 9 &amp; 10 March 2026</li>
+                                    <li><strong>SECTOR:</strong> Startup Incubation / ECE</li>
+                                </ul>
+                                <button class="btn btn-secondary border-glow-btn view-cert-btn" data-image="assets/cert_startup_sparks.jpg">
+                                    <i class="fas fa-eye icon-left"></i> View Full Screen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="cert-flip-card" data-reveal="zoom-in" data-delay="100">
+                        <div class="cert-card-inner glass-panel">
+                            <div class="cert-front">
+                                <div class="cert-glow-ring"></div>
+                                <div class="cert-img-wrapper">
+                                    <img src="assets/cert_tn_impact.jpg" alt="TN-IMPACT Certificate">
+                                </div>
+                                <div class="cert-title-container">
+                                    <span class="cert-issuer font-mono accent-violet">TANCAM &amp; TAMIL NADU GOVT</span>
+                                    <h4 class="cert-name font-header">TN-IMPACT 2026 Student Volunteer</h4>
+                                </div>
+                            </div>
+                            <div class="cert-back">
+                                <div class="cert-badge-seal">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4 class="cert-back-name font-header">TN-IMPACT 2026</h4>
+                                <ul class="cert-details-list font-mono">
+                                    <li><strong>ROLE:</strong> Student Volunteer</li>
+                                    <li><strong>ISSUER:</strong> Dassault Systemes, TIDCO &amp; Sona College</li>
+                                    <li><strong>DATE:</strong> 28 February 2026</li>
+                                </ul>
+                                <button class="btn btn-secondary border-glow-btn view-cert-btn" data-image="assets/cert_tn_impact.jpg">
+                                    <i class="fas fa-eye icon-left"></i> View Full Screen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3 -->
+                    <div class="cert-flip-card" data-reveal="zoom-in" data-delay="200">
+                        <div class="cert-card-inner glass-panel">
+                            <div class="cert-front">
+                                <div class="cert-glow-ring"></div>
+                                <div class="cert-img-wrapper">
+                                    <img src="assets/cert_t4teq_c.jpg" alt="T4TEQ C Certificate">
+                                </div>
+                                <div class="cert-title-container">
+                                    <span class="cert-issuer font-mono accent-gold">T4TEQ SOFTWARE SOLUTIONS</span>
+                                    <h4 class="cert-name font-header">Programming in Advanced C</h4>
+                                </div>
+                            </div>
+                            <div class="cert-back">
+                                <div class="cert-badge-seal">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4 class="cert-back-name font-header">Advanced C</h4>
+                                <ul class="cert-details-list font-mono">
+                                    <li><strong>DURATION:</strong> 2 Months</li>
+                                    <li><strong>ISSUER:</strong> T4TEQ Software Solutions</li>
+                                    <li><strong>DATE:</strong> 16 July 2024</li>
+                                </ul>
+                                <button class="btn btn-secondary border-glow-btn view-cert-btn" data-image="assets/cert_t4teq_c.jpg">
+                                    <i class="fas fa-eye icon-left"></i> View Full Screen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4 -->
+                    <div class="cert-flip-card" data-reveal="zoom-in" data-delay="300">
+                        <div class="cert-card-inner glass-panel">
+                            <div class="cert-front">
+                                <div class="cert-glow-ring"></div>
+                                <div class="cert-img-wrapper">
+                                    <img src="assets/cert_t4teq_python.jpg" alt="T4TEQ Python Certificate">
+                                </div>
+                                <div class="cert-title-container">
+                                    <span class="cert-issuer font-mono accent-cyan">T4TEQ SOFTWARE SOLUTIONS</span>
+                                    <h4 class="cert-name font-header">Programming in Python</h4>
+                                </div>
+                            </div>
+                            <div class="cert-back">
+                                <div class="cert-badge-seal">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4 class="cert-back-name font-header">Python Programming</h4>
+                                <ul class="cert-details-list font-mono">
+                                    <li><strong>DURATION:</strong> 2 Months</li>
+                                    <li><strong>ISSUER:</strong> T4TEQ Software Solutions</li>
+                                    <li><strong>DATE:</strong> 19 August 2024</li>
+                                </ul>
+                                <button class="btn btn-secondary border-glow-btn view-cert-btn" data-image="assets/cert_t4teq_python.jpg">
+                                    <i class="fas fa-eye icon-left"></i> View Full Screen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 5 -->
+                    <div class="cert-flip-card" data-reveal="zoom-in" data-delay="400">
+                        <div class="cert-card-inner glass-panel">
+                            <div class="cert-front">
+                                <div class="cert-glow-ring"></div>
+                                <div class="cert-img-wrapper">
+                                    <img src="assets/cert_ksr_dot_bootcamp.jpg" alt="KSR Dot Bootcamp Certificate">
+                                </div>
+                                <div class="cert-title-container">
+                                    <span class="cert-issuer font-mono accent-violet">K.S.R. COLLEGE OF ENGINEERING</span>
+                                    <h4 class="cert-name font-header">Dot Bootcamp: Arduino &amp; Sensors</h4>
+                                </div>
+                            </div>
+                            <div class="cert-back">
+                                <div class="cert-badge-seal">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4 class="cert-back-name font-header">Dot Bootcamp</h4>
+                                <ul class="cert-details-list font-mono">
+                                    <li><strong>EVENT:</strong> SPRING FEST 2K25 (GRID 2K25)</li>
+                                    <li><strong>ISSUER:</strong> IEEE Student Chapter, EEE Assoc.</li>
+                                    <li><strong>DATE:</strong> 11 October 2025</li>
+                                </ul>
+                                <button class="btn btn-secondary border-glow-btn view-cert-btn" data-image="assets/cert_ksr_dot_bootcamp.jpg">
+                                    <i class="fas fa-eye icon-left"></i> View Full Screen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 6 -->
+                    <div class="cert-flip-card" data-reveal="zoom-in" data-delay="500">
+                        <div class="cert-card-inner glass-panel">
+                            <div class="cert-front">
+                                <div class="cert-glow-ring"></div>
+                                <div class="cert-img-wrapper">
+                                    <img src="assets/cert_electrothon.jpg" alt="Electrothon Participation Certificate">
+                                </div>
+                                <div class="cert-title-container">
+                                    <span class="cert-issuer font-mono accent-gold">SONA COLLEGE OF TECHNOLOGY</span>
+                                    <h4 class="cert-name font-header">Electroblitz 2025: Electrothon</h4>
+                                </div>
+                            </div>
+                            <div class="cert-back">
+                                <div class="cert-badge-seal">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4 class="cert-back-name font-header">Electrothon '25</h4>
+                                <ul class="cert-details-list font-mono">
+                                    <li><strong>ROLE:</strong> Active Hackathon Competitor</li>
+                                    <li><strong>ISSUER:</strong> UNECS &amp; IETE Student Association</li>
+                                    <li><strong>DATE:</strong> 24 October 2025</li>
+                                </ul>
+                                <button class="btn btn-secondary border-glow-btn view-cert-btn" data-image="assets/cert_electrothon.jpg">
+                                    <i class="fas fa-eye icon-left"></i> View Full Screen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 7 -->
+                    <div class="cert-flip-card" data-reveal="zoom-in" data-delay="600">
+                        <div class="cert-card-inner glass-panel">
+                            <div class="cert-front">
+                                <div class="cert-glow-ring"></div>
+                                <div class="cert-img-wrapper">
+                                    <img src="assets/cert_pc_assembling.jpg" alt="PC Assembling Certificate">
+                                </div>
+                                <div class="cert-title-container">
+                                    <span class="cert-issuer font-mono accent-cyan">SONA COLLEGE OF TECHNOLOGY</span>
+                                    <h4 class="cert-name font-header">Electroblitz '24: PC Assembling</h4>
+                                </div>
+                            </div>
+                            <div class="cert-back">
+                                <div class="cert-badge-seal">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4 class="cert-back-name font-header">PC Assembling</h4>
+                                <ul class="cert-details-list font-mono">
+                                    <li><strong>EVENT:</strong> PC Assembling Workshop</li>
+                                    <li><strong>ISSUER:</strong> Department of ECE</li>
+                                    <li><strong>DATE:</strong> 28 October 2024</li>
+                                </ul>
+                                <button class="btn btn-secondary border-glow-btn view-cert-btn" data-image="assets/cert_pc_assembling.jpg">
+                                    <i class="fas fa-eye icon-left"></i> View Full Screen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 8 -->
+                    <div class="cert-flip-card" data-reveal="zoom-in" data-delay="700">
+                        <div class="cert-card-inner glass-panel">
+                            <div class="cert-front">
+                                <div class="cert-glow-ring"></div>
+                                <div class="cert-img-wrapper">
+                                    <img src="assets/cert_circuit_building.jpg" alt="Circuit Building Certificate">
+                                </div>
+                                <div class="cert-title-container">
+                                    <span class="cert-issuer font-mono accent-violet">SONA COLLEGE IEEE BRANCH</span>
+                                    <h4 class="cert-name font-header">Fundamentals of Circuit Building &amp; Arduino</h4>
+                                </div>
+                            </div>
+                            <div class="cert-back">
+                                <div class="cert-badge-seal">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4 class="cert-back-name font-header">Circuit Building</h4>
+                                <ul class="cert-details-list font-mono">
+                                    <li><strong>WORKSHOP:</strong> Electro Diagnose Workshop</li>
+                                    <li><strong>ISSUER:</strong> IEEE Student Branch &amp; EEE Dept</li>
+                                    <li><strong>DATE:</strong> 12 April 2025</li>
+                                </ul>
+                                <button class="btn btn-secondary border-glow-btn view-cert-btn" data-image="assets/cert_circuit_building.jpg">
+                                    <i class="fas fa-eye icon-left"></i> View Full Screen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="divider-container">
+            <svg class="circuit-divider" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,50 L300,50 L330,10 L600,10 L630,80 L900,80 L930,40 L1200,40 L1230,70 L1440,70" class="divider-base-line" />
+                <path d="M630,80 L900,80 L930,40 L1200,40" class="divider-glow-line violet-glow" />
+                <circle cx="330" cy="10" r="4" class="divider-node" />
+                <circle cx="630" cy="80" r="4" class="divider-node" />
+                <circle cx="930" cy="40" r="4" class="divider-node" />
+                <circle cx="1230" cy="70" r="4" class="divider-node" />
+            </svg>
+        </div>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-tag mono">[ MODULE 05 // SYSTEM VISUALS ]</span>
+                    <h2 class="section-title">VISUAL ARCHIVES</h2>
+                    <div class="circuit-header-line"></div>
+                </div>
+
+                <div class="gallery-filter-buttons" data-reveal="fade-up">
+                    <button class="gallery-filter-btn active" data-filter="all">All Logs</button>
+                    <button class="gallery-filter-btn" data-filter="hackathons">Hackathons</button>
+                    <button class="gallery-filter-btn" data-filter="workshops">Workshops &amp; Events</button>
+                    <button class="gallery-filter-btn" data-filter="activities">College Activities</button>
+                    <button class="gallery-filter-btn" data-filter="demos">Project Demos</button>
+                </div>
+
+                <!-- Masonry grid with lightbox support -->
+                <div class="masonry-grid" id="gallery-masonry" data-reveal="fade-up">
+                    <!-- Dynamic Masonry Items Injected in JS to load quickly and dynamically filter -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="divider-container">
+            <svg class="circuit-divider" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,20 L300,20 L330,60 L600,60 L630,30 L900,30 L930,80 L1200,80 L1230,40 L1440,40" class="divider-base-line" />
+                <path d="M330,60 L600,60 M930,80 L1200,80" class="divider-glow-line cyan-glow" />
+                <circle cx="330" cy="60" r="4" class="divider-node" />
+                <circle cx="930" cy="80" r="4" class="divider-node" />
+            </svg>
+        </div>
+
+        <!-- ACADEMIC TIMELINE -->
+        <section id="timeline" class="timeline-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-tag mono">[ MODULE 06 // HISTORICAL PATH ]</span>
+                    <h2 class="section-title">ACADEMIC JOURNEY</h2>
+                    <div class="circuit-header-line"></div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-axis-line"></div>
+                    
+                    <!-- Node 1: College -->
+                    <div class="timeline-item" data-reveal="fade-right">
+                        <div class="timeline-dot-connector">
+                            <div class="timeline-dot-outer"></div>
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-content glass-panel">
+                            <div class="timeline-meta mono">
+                                <span class="timeline-year accent-cyan"><i class="fas fa-calendar-alt"></i> 2023 - PRESENT</span>
+                                <span class="timeline-location"><i class="fas fa-university"></i> Salem, TN</span>
+                            </div>
+                            <h3 class="timeline-degree font-header">B.E. Electronics and Computer Engineering</h3>
+                            <h4 class="timeline-school">Sona College of Technology</h4>
+                            <p class="timeline-text">
+                                Currently pursuing a specialized degree integrating core Electronic system designs and Computations. Concentrating heavily on Verilog, VLSI design principles, embedded architectures, and software engineering.
+                            </p>
+                            <div class="timeline-badge font-mono">CGPA: 8.39 / 10.00</div>
+                        </div>
+                    </div>
+
+                    <!-- Node 2: HSC -->
+                    <div class="timeline-item timeline-left" data-reveal="fade-left">
+                        <div class="timeline-dot-connector">
+                            <div class="timeline-dot-outer"></div>
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-content glass-panel">
+                            <div class="timeline-meta mono">
+                                <span class="timeline-year accent-violet"><i class="fas fa-calendar-alt"></i> COMPLETED 2023</span>
+                                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Salem, TN</span>
+                            </div>
+                            <h3 class="timeline-degree font-header">Higher Secondary Course (HSC)</h3>
+                            <h4 class="timeline-school">A.K.K.V Aarunadu Matric Higher Secondary School</h4>
+                            <p class="timeline-text">
+                                Completed high school training focusing heavily on Advanced Physics, Chemistry, Mathematics, and Computer Science frameworks.
+                            </p>
+                            <div class="timeline-badge font-mono">Score: 522/600 (87.00%)</div>
+                        </div>
+                    </div>
+
+                    <!-- Node 3: SSLC -->
+                    <div class="timeline-item" data-reveal="fade-right">
+                        <div class="timeline-dot-connector">
+                            <div class="timeline-dot-outer"></div>
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-content glass-panel">
+                            <div class="timeline-meta mono">
+                                <span class="timeline-year accent-gold"><i class="fas fa-calendar-alt"></i> COMPLETED 2021</span>
+                                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Salem, TN</span>
+                            </div>
+                            <h3 class="timeline-degree font-header">Secondary School Leaving Certificate (SSLC)</h3>
+                            <h4 class="timeline-school">Rajaji Vidhyalaya CBSE School</h4>
+                            <p class="timeline-text">
+                                Foundational CBSE secondary school education covering general sciences, algebra, computing, and logical reasoning.
+                            </p>
+                            <div class="timeline-badge font-mono">Score: 404/500 (80.40%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="divider-container">
+            <svg class="circuit-divider" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,60 L200,60 L230,30 L500,30 L530,90 L800,90 L830,40 L1100,40 L1130,70 L1440,70" class="divider-base-line" />
+                <path d="M230,30 L500,30 L530,90 L800,90" class="divider-glow-line cyan-glow" />
+                <circle cx="230" cy="30" r="4" class="divider-node" />
+                <circle cx="530" cy="90" r="4" class="divider-node" />
+                <circle cx="830" cy="40" r="4" class="divider-node" />
+            </svg>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-tag mono">[ MODULE 07 // TERMINAL INBOUND ]</span>
+                    <h2 class="section-title">CONNECT PATHWAYS</h2>
+                    <div class="circuit-header-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-form-wrapper glass-panel" data-reveal="fade-right">
+                        <div class="glass-inner-border"></div>
+                        <h3 class="contact-title font-header">Transmit Message</h3>
+                        <p class="contact-subtitle mono font-mono">&gt; Establish socket communication channel...</p>
+                        
+                        <form id="contact-form" class="custom-form">
+                            <div class="form-group">
+                                <label for="form-name" class="form-label font-mono">&gt; Name</label>
+                                <input type="text" id="form-name" class="form-input" placeholder="e.g. Nicola Tesla" required>
+                                <span class="input-line-glow"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email" class="form-label font-mono">&gt; Socket Email</label>
+                                <input type="email" id="form-email" class="form-input" placeholder="e.g. tesla@wardenclyffe.net" required>
+                                <span class="input-line-glow"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-msg" class="form-label font-mono">&gt; Payload Body</label>
+                                <textarea id="form-msg" class="form-input form-textarea" rows="5" placeholder="Enter details to transmit..." required></textarea>
+                                <span class="input-line-glow"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary glowing-btn w-full" id="form-submit-btn">
+                                <span class="btn-text">TRANSMIT PACKET</span>
+                                <span class="btn-glow"></span>
+                            </button>
+                        </form>
+                        
+                        <div class="form-console-log mono" id="form-feedback-console">
+                            <!-- Inbound transmissions logs printed here dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="contact-info-wrapper" data-reveal="fade-left">
+                        <div class="contact-info-card glass-panel">
+                            <h3 class="contact-title font-header">Hardware Details</h3>
+                            
+                            <div class="info-link-item">
+                                <div class="info-icon bg-cyan"><i class="fas fa-envelope"></i></div>
+                                <div class="info-content">
+                                    <span class="info-label font-mono">EMAIL JUNCTION</span>
+                                    <a href="mailto:tnpriyaa2007@gmail.com" class="info-val font-mono">tnpriyaa2007@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-link-item">
+                                <div class="info-icon bg-violet"><i class="fas fa-phone"></i></div>
+                                <div class="info-content">
+                                    <span class="info-label font-mono">PHONE SWITCH</span>
+                                    <a href="tel:9385971701" class="info-val font-mono">+91 9385971701</a>
+                                </div>
+                            </div>
+
+                            <div class="info-link-item">
+                                <div class="info-icon bg-gold"><i class="fab fa-linkedin-in"></i></div>
+                                <div class="info-content">
+                                    <span class="info-label font-mono">LINKEDIN BUS</span>
+                                    <a href="https://linkedin.com/in/priyaa-dharshini-tn-88095b31b" target="_blank" class="info-val font-mono">priyaa-dharshini-tn-88095b31b</a>
+                                </div>
+                            </div>
+
+                            <div class="info-link-item">
+                                <div class="info-icon bg-cyan-light"><i class="fab fa-github"></i></div>
+                                <div class="info-content">
+                                    <span class="info-label font-mono">GITHUB REPOSITORY</span>
+                                    <a href="https://github.com/PriyaadharshiniTN" target="_blank" class="info-val font-mono">PriyaadharshiniTN</a>
+                                </div>
+                            </div>
+
+                            <div class="info-link-item">
+                                <div class="info-icon bg-red"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="info-content">
+                                    <span class="info-label font-mono">COORDINATES</span>
+                                    <span class="info-val font-mono">Salem, Tamil Nadu, India</span>
+                                </div>
+                            </div>
+
+                            <div class="tagline-callout font-header">
+                                "Let's build something meaningful together."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER WITH CIRCUIT TRACE -->
+    <footer class="footer">
+        <div class="footer-circuit-pattern">
+            <svg class="footer-svg" viewBox="0 0 1440 200" preserveAspectRatio="none">
+                <path d="M0,150 L300,150 L350,100 L700,100 L750,150 L1080,150 L1130,80 L1440,80" class="footer-trace-line" />
+                <path d="M700,100 L750,150 L1080,150 L1130,80" class="footer-trace-glow cyan" />
+                <circle cx="350" cy="100" r="6" class="footer-node" />
+                <circle cx="700" cy="100" r="6" class="footer-node" />
+                <circle cx="1130" cy="80" r="6" class="footer-node" />
+            </svg>
+        </div>
+        
+        <div class="container footer-content-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg class="microchip-icon pulsing" viewBox="0 0 100 100" width="36">
+                        <rect x="25" y="25" width="50" height="50" rx="8" class="chip-body" />
+                        <circle cx="50" cy="50" r="10" fill="#00f5ff" />
+                    </svg>
+                    <span class="font-header">PRIYAA DHARSHINI TN</span>
+                </div>
+                <p class="footer-about">
+                    An Electronics and Computer Engineering specialist linking robust microcontroller frameworks, VLSI architectures, and modern coding scripts.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h4 class="footer-title font-header">Sitemap</h4>
+                <div class="links-list">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#gallery">Gallery</a>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <div class="social-row">
+                    <a href="https://linkedin.com/in/priyaa-dharshini-tn-88095b31b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/PriyaadharshiniTN" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:tnpriyaa2007@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="mono copyright-text">
+                    &copy; 2026 PRIYAA DHARSHINI TN. <br>DESIGNED WITH <span class="accent-cyan">LIVING CIRCUITS</span>. ALL RIGHTS SECURED.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL FOR CERTIFICATES & GALLERY -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close" id="lightbox-close-btn">&times;</span>
+        <button class="lightbox-nav-btn prev-btn" id="lightbox-prev-btn" aria-label="Previous image">&#10094;</button>
+        <button class="lightbox-nav-btn next-btn" id="lightbox-next-btn" aria-label="Next image">&#10095;</button>
+        <div class="lightbox-content-box glass-panel">
+            <div class="glass-inner-border"></div>
+            <img class="lightbox-img" id="lightbox-target-img" src="" alt="View Enlarged Certificate">
+            <div class="lightbox-caption mono" id="lightbox-target-caption"></div>
+        </div>
+    </div>
+
+    <!-- MAIN INTERACTIVE SCRIPTS -->
+    <script src="script.js"></script>
+</body>
+</html>
